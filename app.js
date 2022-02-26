@@ -2,6 +2,7 @@
 function getInput(inputId) {
 	const inputField = document.getElementById(inputId);
 	const inputValue = inputField.value;
+	console.log(typeof(inputValue))
 	return inputValue;
 }
 //Adding listener for button and then build the url based on input and fetch data from server
@@ -34,10 +35,12 @@ function toDoData(data) {
 	const suggestion = document.getElementById('suggestion');
 	const suggestionDiv = document.getElementById('suggestionDiv');
 	const full = document.getElementById('full');
+	const footer = document.getElementById('footer');
 	const percentage = data.percentage;
 	if (percentage <= 10) {
 		suggestionDiv.classList.add('suggestionDiv');
-		
+		footer.classList.remove('mt-20');
+		footer.classList.add('mt-2');
 		suggestion.innerText = `পথের শেষে এসে দেখি অনেক হিসাব বাকি-
 		সারাজীবন যা করেছি তার পুরোটাই ফাঁকি`
 	} else if (percentage > 10 && percentage <= 30) {
