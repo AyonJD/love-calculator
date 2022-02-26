@@ -9,9 +9,11 @@ const button = document.getElementById('btn');
 button.addEventListener('click', () => {
 	const yourName = getInput('fname');
 	const partnerName = getInput('sname');
+	const errorField = document.getElementById('error');
 	if (yourName === '' || partnerName === '' || typeof (yourName) === undefined) {
-		alert('fggf')
+		error.classList.remove('hidden')
 	} else {
+		error.classList.add('hidden')
 		const url = `https://love-calculator.p.rapidapi.com/getPercentage?sname=${partnerName}&fname=${yourName}`
 		//Clear input Field
 		clear();
