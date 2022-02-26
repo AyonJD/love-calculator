@@ -13,24 +13,27 @@
     <script src="./app.js" defer></script>
 
   </head>
-  <body style="background-color: #DB2777;">
+  <body>
+    <div class="py-4 full" id="full" style="background-color: #DB2777;">
       <header>
           <h1 class="pt-8 text-5xl text-center font-bold text-white">Perfect <span class="text-white">COUPLE</span></h1>
       </header>
       <main>
         <section class="body-font relative">
-          <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
+          <div class="container px-5 py-14 mx-auto flex sm:flex-nowrap flex-wrap">
             <!-- Display Result -->
-            <div id="display-parent" class="lg:w-2/3 md:w-1/2 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-center justify-start relative" style="background-color: #DB2777;">
+            <div id="display-parent" class="lg:w-2/3 md:w-1/2 w-full rounded-lg overflow-hidden sm:mr-10 p-10 flex items-center justify-start relative" style="background-color: #DB2777;">
               <div id="inner-content" class="text-white">
-                <h1 class="py-3 text-lg font-bold">Your Name: <span class="text-teal-500"></span></h1>
-                <h1 class="py-3 text-lg font-bold">Your Partner Name: <span class="text-teal-500"></span></h1>
-                <h1 class="py-3 text-lg font-bold">Love Parcentage: <span class="text-teal-500"></span></h1>
-                <h1 class="py-3 text-lg font-bold">Your Next Step: <span class="text-teal-500"></span></h1>
+               <div>
+                  <h1 class="py-3 text-lg font-bold">Your Name: <span class="text-teal-500"></span></h1>
+                  <h1 class="py-3 text-lg font-bold">Your Partner Name: <span class="text-teal-500"></span></h1>
+                  <h1 class="py-3 text-lg font-bold">Love Parcentage: <span class="text-teal-500"></span></h1>
+                  <h1 class="py-3 text-lg font-bold">Your Next Step: <span class="text-teal-500"></span></h1>
+               </div>
               </div>
             </div>
             <!-- Form part -->
-            <div id="form-parent" class="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 px-8 rounded-lg" style="background-color: #DB2777;">
+            <div id="form-parent" class="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 px-8 py-4 rounded-lg" style="background-color: #DB2777;">
               <!-- Your Name -->
               <div class="relative mb-4">
                 <label for="fname" class="leading-7 text-sm text-white">Your Name</label>
@@ -45,6 +48,13 @@
             </div>
           </div>
         </section>
+        <section class="suggestionDiv" id="suggestionDiv">
+          <h1 id="suggestion" class="lg:text-2xl text-lg text-white text-center py-2"></h1>
+        </section>
       </main>
+    </div>
+      <div class="bg-gray-800 py-0">
+        <p class="text-white font-medium text-center py-1">&copy;2022 All Right Reserved | Developed by AYON JODDER</p>
+      </div>
   </body>
 </html>
