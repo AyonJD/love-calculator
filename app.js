@@ -11,10 +11,10 @@ button.addEventListener('click', () => {
 	const yourName = getInput('fname');
 	const partnerName = getInput('sname');
 	const errorField = document.getElementById('error');
-	if (yourName === '' || partnerName === '' || typeof (yourName) === undefined) {
-		error.classList.remove('hidden')
+	if (yourName === '' || partnerName === '' || typeof parseFloat(yourName) === 'number' || typeof parseFloat(partnerName) === 'number') {
+		errorField.classList.remove('hidden')
 	} else {
-		error.classList.add('hidden')
+		errorField.classList.add('hidden')
 		const url = `https://love-calculator.p.rapidapi.com/getPercentage?sname=${partnerName}&fname=${yourName}`
 		//Clear input Field
 		clear();
