@@ -21,7 +21,7 @@ button.addEventListener('click', () => {
 			"method": "GET",
 			"headers": {
 				"x-rapidapi-host": "love-calculator.p.rapidapi.com",
-				"x-rapidapi-key": "YOUR_API_KEY"
+				"x-rapidapi-key": "YOUR_KEY_HERE"
 			}
 		})
 			.then(res => res.json())
