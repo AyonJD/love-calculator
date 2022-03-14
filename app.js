@@ -21,7 +21,7 @@ button.addEventListener('click', () => {
 			"method": "GET",
 			"headers": {
 				"x-rapidapi-host": "love-calculator.p.rapidapi.com",
-				"x-rapidapi-key": "YOUR_KEY_HERE"
+				"x-rapidapi-key": "YOUR_API_KEY_HERE"
 			}
 		})
 			.then(res => res.json())
@@ -68,6 +68,17 @@ function toDoData(data) {
 		<h1 class="py-3 text-lg font-bold">Your Next Step: <span class="text-teal-500">${data.result}</span></h1>
 	`
 }
+// Triger the button by pressing the enter button || Always input a event listener add kore then button k trigger korte hobe
+const eventHandler = (inputId) => {
+	document.getElementById(inputId)
+    .addEventListener("keyup", e => {
+		if (e.key === 'Enter') {
+        document.getElementById("btn").click();
+    }
+})
+}
+eventHandler('fname');
+eventHandler('sname');
 //clearing input Field
 const clear = () => {
 	const input = Array.from(document.querySelectorAll('input'));
